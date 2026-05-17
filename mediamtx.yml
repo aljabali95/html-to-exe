@@ -799,8 +799,7 @@ pathDefaults:
 paths:
   # example:
   # my_camera:
-  #   source: rtsp://my_camera
-
+  #   source: rtsp://admin:123456@192.168.1.11:554/stream1
   # Settings under path "all_others" are applied to all paths that
   # do not match another entry.
   all_others:
