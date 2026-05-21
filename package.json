@@ -1,6 +1,6 @@
 {
   "name": "express-wash-erp",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "مغسلة الاكسبريس — نظام إدارة متكامل",
   "author": "AL JABALI",
   "main": "main.js",
