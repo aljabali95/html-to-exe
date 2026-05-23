@@ -56,7 +56,7 @@ function createWindow() {
 
 app.whenReady().then(() => {
   startMediamtx();
-  setTimeout(createWindow, 2000);
+  setTimeout(createWindow, 4000);
 });
 app.on('window-all-closed', () => { stopMediamtx(); app.quit(); });
 app.on('before-quit', () => { stopMediamtx(); });
