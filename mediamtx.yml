@@ -1,0 +1,27 @@
+logLevel: info
+logDestinations: [stdout]
+
+rtsp: true
+rtspAddress: :8554
+rtmp: true
+rtmpAddress: :1935
+hls: true
+hlsAddress: :8080
+hlsVariant: lowLatency
+hlsSegmentCount: 7
+hlsSegmentDuration: 1s
+hlsPartDuration: 200ms
+hlsAlwaysRemux: false
+hlsAllowOrigins: ['*']
+webrtc: true
+webrtcAddress: :8889
+webrtcAllowOrigins: ['*']
+webrtcLocalUDPAddress: :8189
+webrtcIPsFromInterfaces: true
+srt: true
+srtAddress: :8890
+
+paths:
+  cam:
+    source: rtsp://admin:123456@192.168.1.10:554/live/ch00_0
+    rtspTransport: tcp
