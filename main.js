@@ -36,12 +36,20 @@ function createWindow() {
     minWidth: 800, minHeight: 600,
     title: 'Express Wash ERP',
     icon: path.join(__dirname, 'icon.png'),
-    webPreferences: { nodeIntegration: false, contextIsolation: true },
+    webPreferences: {
+      nodeIntegration: false,
+      contextIsolation: true,
+      webSecurity: false
+    },
     autoHideMenuBar: true,
     show: false,
   });
 
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
+  mainWindow.webContents.session.setPermissionRequestHandler((webContents, permission, callback) => {
+    if (permission === 'media') return callback(true);
+    callback(false);
+  });
   mainWindow.once('ready-to-show', () => { mainWindow.show(); mainWindow.maximize(); });
   mainWindow.on('closed', () => { mainWindow = null; });
 }
