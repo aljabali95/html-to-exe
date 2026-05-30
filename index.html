@@ -4187,7 +4187,7 @@ function startRefresh(img,url){
   refreshInterval = setInterval(()=>{
     var sep=url.includes('?')?'&':'?';
     img.src=url+sep+'t='+Date.now();
-  },1000);
+  },3000);
 }
 function stopCam(){
   clearInterval(refreshInterval);if(camStream){camStream.getTracks().forEach(t=>t.stop());camStream=null;}
@@ -5276,7 +5276,7 @@ function startAutoDetect(){
       }catch(e){}
       finally{_busy=false;}
     })();
-  },10000);
+  },3000);
 }
 function stopAutoDetect(){if(_adi){clearInterval(_adi);_adi=null;}_lp={};}
 
